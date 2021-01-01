@@ -10,13 +10,13 @@ class Person extends REST_Controller{
     $this->load->model('PersonM');
   }
 
-  // method index untuk menampilkan semua data person menggunakan method get
+  // function index untuk menampilkan semua data person menggunakan function get
   public function index_get(){
     $response = $this->PersonM->all_person();
     $this->response($response);
   }
 
-  // untuk menambah person menaggunakan method post
+  // untuk menambah person menaggunakan function post
   public function add_post(){
     $response = $this->PersonM->add_person(
         $this->post('name'),
@@ -26,7 +26,7 @@ class Person extends REST_Controller{
     $this->response($response);
   }
 
-  // update data person menggunakan method put
+  // update data person menggunakan function put
   public function update_put(){
     $response = $this->PersonM->update_person(
         $this->put('id'),
@@ -37,7 +37,7 @@ class Person extends REST_Controller{
     $this->response($response);
   }
 
-  // hapus data person menggunakan method delete
+  // hapus data person menggunakan function delete
   public function delete_delete(){
     $response = $this->PersonM->delete_person(
         $this->delete('id')
@@ -48,3 +48,5 @@ class Person extends REST_Controller{
 }
 
 ?>
+
+<!-- semangat -->
